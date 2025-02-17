@@ -1,0 +1,34 @@
+/* .Breadcrumb {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+    text-decoration: none !important;   
+    align-items: center;
+    
+}
+
+
+
+.Breadcrumb .breadcrumb-item {
+    margin: 0 0.5rem;
+    font-size: 30px;
+    color: white !important;
+    text-decoration: none !important;
+    text-transform: none !important;
+   
+}
+.Breadcrumb span {
+    color: white !important;
+    text-decoration: none !important;
+
+    
+}  */
+.Appointmentheading {
+font-size: 26px;
+padding-bottom: 15px;
+
+}
+.Appointmentform {
+    color: white;
+}
