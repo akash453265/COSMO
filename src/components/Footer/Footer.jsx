@@ -272,7 +272,7 @@ const Footer = () => {
             width: '100%',
         }} >
             {/* <div className="elementor-background-overlay "></div> */}
-            <h3 className="mb-3 footer-topt" style={{ color: "#d4a373" }}>Newsletter</h3>
+            <h3 className="mb-3 footer-topt" style={{ color: "#c36" }}>Newsletter</h3>
             <p className="footer-topp">Signup our newsletter to get update information, news, insight or promotions.</p>
             <div className="d-flex justify-content-center mb-4">
                 <input
@@ -300,15 +300,15 @@ const Footer = () => {
             <div className="container   " style={{ padding: "50px" }}>
                 <div className="row">
                     <div className="col-md-4 text-center footer-b-t ">
-                        <h6 className="text-uppercase text-warning">Email Us</h6>
+                        <h6 className="text-uppercase ">Email Us</h6>
                         <p className="fw-bold">support@yourdomain.tld</p>
                     </div>
                     <div className="col-md-4 text-center footer-b-t ">
-                        <h6 className="text-uppercase text-warning">Call Us</h6>
+                        <h6 className="text-uppercase ">Call Us</h6>
                         <p className="fw-bold">+6221.2002.2012</p>
                     </div>
                     <div className="col-md-4 text-center footer-b-t2">
-                        <h6 className="text-uppercase text-warning">Follow Our Social</h6>
+                        <h6 className="text-uppercase">Follow Our Social</h6>
                         <div className="footer-icons ">
                             <i className="bi bi-facebook mx-2"></i>
                             <i className="bi bi-instagram mx-2"></i>
@@ -318,7 +318,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <p className="mt-4">Copyright &copy; 2022 Astrologia, All rights reserved. Powered by MoxCreative.</p>
+            <p className="mt-4">Copyright &copy; 2025 Shradha Sharma, All rights reserved. </p>
             <p>
                 <a href="#" className="text-light text-decoration-none">Term of use</a> -
                 <a href="#" className="text-light text-decoration-none mx-2">Privacy Policy</a> -

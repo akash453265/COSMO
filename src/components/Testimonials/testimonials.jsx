@@ -442,25 +442,25 @@ const testimonialsData = [
     {
         text: "I came to consultation, because I was puzzled with my current life situation and received clear ways to develop, along with a plan to move ahead.",
         image: "https://template-kit.evonicmedia.com/layout50/wp-content/uploads/2023/10/portrait-of-young-new-workers-facing-serious-at-ca-2022-05-08-22-15-18-utc-1.png",
-        author: "David Parker",
+        author: "Shradha Sharma",
         profession: "Astrologer",
     },
     {
         text: "I came to consultation, because I was puzzled with my current life situation and received clear ways to develop, along with a plan to move ahead.",
         image: "https://template-kit.evonicmedia.com/layout50/wp-content/uploads/2023/10/portrait-of-young-new-workers-facing-serious-at-ca-2022-05-08-22-15-18-utc-1.png",
-        author: "David Parker",
+        author: "Shradha Sharma",
         profession: "Astrologer",
     },
     {
         text: "I came to consultation, because I was puzzled with my current life situation and received clear ways to develop, along with a plan to move ahead.",
         image: "https://template-kit.evonicmedia.com/layout50/wp-content/uploads/2023/10/portrait-of-young-new-workers-facing-serious-at-ca-2022-05-08-22-15-18-utc-1.png",
-        author: "David Parker",
+        author: "Shradha Sharma",
         profession: "Astrologer",
     },
     {
         text: "I came to consultation, because I was puzzled with my current life situation and received clear ways to develop, along with a plan to move ahead.",
         image: "https://template-kit.evonicmedia.com/layout50/wp-content/uploads/2023/10/portrait-of-young-new-workers-facing-serious-at-ca-2022-05-08-22-15-18-utc-1.png",
-        author: "David Parker",
+        author: "Shradha Sharma",
         profession: "Astrologer",
     }
 ];

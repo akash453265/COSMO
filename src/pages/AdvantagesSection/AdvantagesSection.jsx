@@ -14,7 +14,7 @@ const AdvantagesSection = () => {
                 <Row className="text-center mb-5">
                     <Col>
                         <h6 className="text-uppercase text-primary text-white mb-3">ADVANTAGES</h6>
-                        <h2 className="mb-3  section-title">Benefits Of Learning Magic</h2>
+                        <h2 className="mb-3  section-title">WHY CHOOSE US</h2>
                         <p className="text-muted">
                             Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit; Sed Do Eiusmod Tempor
                             Incididunt Ut Labore Et Dolore Magna Aliqua Ut Enim.

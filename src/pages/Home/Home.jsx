@@ -13,6 +13,7 @@ import AdvantagesSection from "../AdvantagesSection/AdvantagesSection";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+// import AuthForm from "../AuthForm/AuthForm";
 // import Herosection from "../../components/Herosection/Herosection";
 
 AOS.init({
@@ -36,6 +37,7 @@ const Home = () => {
       {/* <Elemantorbox/> */}
       <Imagegallery />
       {/* <Videogallery /> */}
+      {/* <AuthForm /> */}
       
       
      

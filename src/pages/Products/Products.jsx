@@ -22,12 +22,13 @@ function Products() {
                 <Col className="col-md-8">
                     <div>
                         <ul className='product-list  text-white '>
-                            <li className=' products-text col-md-6'><span>LATEST EDITIONS</span>
+                            <li className=' products-text col-md-12'>
                                 <h1>Best Books Form Our Authors</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur Ui adipiscing elit, sed do eiusmod tempor.</p>
                             </li>
-                            <li className='products-text col-md-6'><p>Lorem ipsum dolor sit amet, consectetur Ui adipiscing elit, sed do eiusmod tempor.</p>
-                                {/* <Button className='Button'><IoIosStar /> Read more</Button> */}
-                                {/* <div className='mt-4'>
+                            {/* <li className='products-text col-md-6'><p>Lorem ipsum dolor sit amet, consectetur Ui adipiscing elit, sed do eiusmod tempor.</p>
+                                 <Button className='Button'><IoIosStar /> Read more</Button> 
+                                 <div className='mt-4'>
                                     <button className="c-button c-button--gooey"> <IoIosStar />Read more
                                         <div className="c-button__blobs">
                                             <div />
@@ -44,8 +45,8 @@ function Products() {
                                             </filter>
                                         </defs>
                                     </svg>
-                                </div> */}
-                            </li>
+                                </div> 
+                            </li> */}
                         </ul>
 
                         <div className='product-list g-5 text-white'>

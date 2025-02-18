@@ -3,8 +3,8 @@
 }
 
 .feature-item {
-  /* background-color: rgba(204, 54, 102, 0.7); */
-  background-color: #150f3d;;
+  background-color: rgba(204, 54, 102, 0.7);
+  /* background-color: #150f3d;; */
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -20,6 +20,8 @@
   color: #2d3748;
   font-weight: 600;
   color: white;
+  font-size: 25px !important;
+
 }
 
 .text-primary {
@@ -45,7 +47,7 @@
 }
 
 .section-title {
-  color: #ffffff;
+  color:#c36 ;
   font-size: 2.5rem;
   font-weight: 600;
 }

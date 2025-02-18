@@ -286,6 +286,9 @@
   padding: 15px;
 
 } */
+.text-uppercase {
+  color: #c36;
+}
 
 .footer-icons i {
 
@@ -347,5 +350,3 @@
   background-size: cover;
   position: relative;
 }
-
-

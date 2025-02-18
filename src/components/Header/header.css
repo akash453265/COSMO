@@ -6,13 +6,20 @@
 
 
 
-.hoverr {
+/* .hoverr {
     color: #fff;
     align-items: center;
-    /* padding: 10px; */
+    
     margin-right: 15px;
     padding-top: 25px;
 
+} */
+.hoverr {
+    color: #fff;
+    align-items: center;
+    margin-right: 15px;
+    padding-top: 17px;
+    font-size: 16px;
 }
 
 .hoverr:hover {
@@ -233,6 +240,7 @@
         align-items: baseline;
         padding: 0;
     }
+  
 }
 
 @media only screen and (max-width: 1200px) {
@@ -243,6 +251,7 @@
         align-items: baseline;
         padding: 0;
     }
+   
 }
 
 @media only screen and (min-width: 1201px) {

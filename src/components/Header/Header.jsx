@@ -248,12 +248,12 @@
 //     >
 //       <Container>
 //         <Navbar.Brand href="#home">Your Logo</Navbar.Brand>
-        
+
 //         <Navbar.Toggle 
 //           aria-controls="basic-navbar-nav" 
 //           onClick={() => setExpanded(expanded ? false : "expanded")}
 //         />
-        
+
 //         <Navbar.Collapse id="basic-navbar-nav">
 //           <Nav className="ms-auto">
 //             <Nav.Link 
@@ -312,14 +312,17 @@ const Header = () => {
             <Container>
                 <Row>
                     <Navbar expand="lg" className="next-navbar" expanded={expanded}>
-                        <Navbar.Brand href="/" className="me-auto logo px-2 d-lg-none align-items-start">
+                        {/* <Navbar.Brand href="/" className="me-auto logo px-2 d-lg-none align-items-start">
                             <img src={logo} height="30" alt="Logo" className="d-inline-block align-top "/>
+                        </Navbar.Brand> */}
+                        <Navbar.Brand href="/" className="me-auto logo px-2  align-items-start">
+                            <img src={logo} height="30" alt="Logo" className="d-inline-block align-top " />
                         </Navbar.Brand>
 
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Button className="close-menu  pl-16 d-lg-none" onClick={() => setExpanded(false)}>X</Button>
-                            <Nav className="me-auto">
+                            <Nav className="ms-auto">
                                 <Nav.Link href="/" className="hoverr" onClick={() => setExpanded(false)}>
                                     <IoHome className="nav-text" />
                                     <span>Home</span>
@@ -343,13 +346,8 @@ const Header = () => {
                                     <FaShoppingBag className="nav-text" />
                                     <span>About Us</span>
                                 </Nav.Link>
-                            </Nav>
 
-                            <Navbar.Brand href="/" className="me-auto logo logo33 d-none d-lg-block">
-                                <img src={logo} height="40" alt="Logo" />
-                            </Navbar.Brand>
 
-                            <Nav className="ms-auto">
                                 <Nav.Link href="/blogPage" className="hoverr" onClick={() => setExpanded(false)}>
                                     <BiLogoBlogger className="nav-text" />
                                     <span>Blog</span>
@@ -381,7 +379,46 @@ const Header = () => {
                                         </button>
                                     </a>
                                 </div>
+
                             </Nav>
+
+                            {/* <Navbar.Brand href="/" className="me-auto logo logo33 d-none d-lg-block">
+                                <img src={logo} height="40" alt="Logo" />
+                            </Navbar.Brand> */}
+
+                            {/* <Nav className="ms-auto">
+                                <Nav.Link href="/blogPage" className="hoverr" onClick={() => setExpanded(false)}>
+                                    <BiLogoBlogger className="nav-text" />
+                                    <span>Blog</span>
+                                </Nav.Link>
+                                <Nav.Link href="Adminpanel/" className="hoverr" onClick={() => setExpanded(false)}>
+                                    <FaPhoneAlt className="nav-text" />
+                                    <span>Help</span>
+                                </Nav.Link>
+                                <NavDropdown title={<span><GrGallery className="nav-text" /> Gallerys</span>} id="gallery-dropdown" className="hoverr d-lg-none">
+                                    <NavDropdown.Item href="/imagegallerypage" onClick={() => setExpanded(false)}>Images Gallery</NavDropdown.Item>
+                                    <NavDropdown.Item href="/videogallerypage" onClick={() => setExpanded(false)}>Video Gallery</NavDropdown.Item>
+                                </NavDropdown>
+                                <Nav.Link href="#Gallerys" className="hoverr d-none d-lg-block" onClick={() => setExpanded(false)}>
+                                    <GrGallery className="nav-text" /><span>Gallerys</span>
+                                    <ul className="hoverr2">
+                                        <li><a href="/imagegallerypage" className="text-decoration-none">Images Gallery</a></li>
+                                        <li><a href="/videogallerypage" className="text-decoration-none">Video Gallery</a></li>
+                                    </ul>
+                                </Nav.Link>
+                                <div className="hoverrbtn">
+                                    <a href="/sing-up">
+                                        <button className="c-button c-button2 c-button--gooey">
+                                            Sign/Login
+                                            <div className="c-button__blobs">
+                                                <div />
+                                                <div />
+                                                <div />
+                                            </div>
+                                        </button>
+                                    </a>
+                                </div>
+                            </Nav> */}
                         </Navbar.Collapse>
                     </Navbar>
                 </Row>

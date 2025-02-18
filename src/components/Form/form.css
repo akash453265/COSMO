@@ -100,18 +100,21 @@
   width: 100%;
 }
 .form-icon  {
-  color: #cc9e75;
+  /* color: #cc9e75; */
+  color: #c36;
 }
 .form-icon svg {
   width: 40px;
   height: 40px;
 }
 .form-icon-text {
-  color: #cc9e75;
+  /* color: #cc9e75; */
+  color: #c36;
   font-size: 20px;
 }
 .form-top-text {
-  color: #cc9e75;
+  /* color: #cc9e75; */
+  color: #c36;
   font-size: 40px;
 }
 
