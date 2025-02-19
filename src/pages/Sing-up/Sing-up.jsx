@@ -197,23 +197,22 @@
 
 import React, { useState } from "react";
 import { Container, Row, Col, Form, Button, ToggleButton, ButtonGroup } from "react-bootstrap";
-import { FaGoogle, FaFacebook, FaEnvelope, FaWindowClose } from "react-icons/fa";
+// import { FaGoogle, FaFacebook, FaEnvelope, FaWindowClose } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import bg from "../../assets/images/singupbg/singupbg.png"; // Ensure correct path
 import logo from "../../assets/images/navbar/logo2.png";
 import "./sing-up.css";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const SignIn = () => {
   const [isLogin, setIsLogin] = useState(true);
+  const [dob, setDob] = useState(null);
 
   return (
-    <div className="signin-page d-flex justify-content-center align-items-center">
-      <Container className="justify-content-center align-items-center">
-        <Link to="/">
-          <div className="backtohome">
-            <FaWindowClose />
-          </div>
-        </Link>
+    <div className=" signin-page d-flex justify-content-center align-items-center">
+      <div className="fullwidth ">
+
 
         <Row className="signin-box rounded shadow-lg py-0">
           {/* Close Button */}
@@ -222,13 +221,22 @@ const SignIn = () => {
           <Col
             md={6}
             className="d-none d-md-block text-light text-center"
+            
             style={{
               backgroundImage: `url(${bg})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               minHeight: "100vh",
             }}
-          ></Col>
+            
+          >
+            <Link to="/" className="nonee">
+            <Button className="backtohome">
+            
+            Back to home
+          </Button >
+           </Link>
+          </Col>
 
           {/* Right Side - Form Section */}
           <Col md={6} className="text-light  rounded-l-full Right-Side">
@@ -241,7 +249,7 @@ const SignIn = () => {
 
               {/* Toggle Login/Signup */}
               <div className="py-5">
-                <ButtonGroup className="w-100 py-3 ">
+                <ButtonGroup className="buttongroup py-3 ">
                   {/* <ToggleButton
                   id="login-toggle"
                   type="radio"
@@ -268,6 +276,7 @@ const SignIn = () => {
                     style={{ backgroundColor: isLogin ? "#c36" : "transparent", color: isLogin ? "#fff" : "#c36", borderColor: "#c36" }}
                     checked={isLogin}
                     onClick={() => setIsLogin(true)}
+                    className="login-toggle2"
                   >
                     Login
                   </ToggleButton>
@@ -288,38 +297,91 @@ const SignIn = () => {
 
                 {/* Form */}
                 <Form className="autofrom">
+                  {!isLogin && (
+                    <Form.Group className="mb-3 formgroup ">
+                      <Form.Control
+                        type="text"
+                        placeholder="Enter Your Name"
+                        className=" formControl border-light"
+                        required
+                      />
+                    </Form.Group>
+
+
+
+                  )}
                   <Form.Group controlId="email" className="mb-3">
                     <div className="input-group">
-                      <span className="input-group-text bg-transparent text-light border-light">
+                      {/* <span className="input-group-text  text-light border-light">
                         <FaEnvelope />
-                      </span>
+                      </span> */}
                       <Form.Control
                         type="email"
-                        placeholder="Yourname@gmail.com"
-                        className="bg-transparent text-light border-light"
+                        placeholder="Enter Your Email "
+                        className=" formControl  border-light"
                         required
                       />
                     </div>
                   </Form.Group>
 
-                  <Form.Group className="mb-3">
+                  {!isLogin && (
+                    <Form.Group className="mb-3 formgroup ">
+                      <Form.Control
+                        type="number"
+                        placeholder="Enter Your Number"
+                        className=" formControl border-light"
+                        required
+                      />
+                    </Form.Group>
+
+
+
+                  )}
+                  {!isLogin && (
+                    <Form.Group className="mb-3 formgroup ">
+                      <DatePicker
+                        selected={dob}
+                        onChange={(date) => setDob(date)}
+                        dateFormat="dd/MM/yyyy"
+                        placeholderText="Enter Your Date of Birth"
+                        className="formControl border-light form-control"
+                        required
+                      />
+                    </Form.Group>
+
+
+
+                  )}
+
+                  <Form.Group className="mb-3 formgroup ">
                     <Form.Control
                       type="password"
-                      placeholder="Password"
-                      className="bg-transparent text-light border-light"
+                      placeholder="Enter Your Password"
+                      className=" formControl border-light"
                       required
                     />
                   </Form.Group>
+
+
 
                   {!isLogin && (
                     <Form.Group className="mb-3">
                       <Form.Control
                         type="password"
                         placeholder="Confirm Password"
-                        className="bg-transparent text-light border-white"
+                        className=" formControl border-white"
                         required
                       />
                     </Form.Group>
+
+
+                  )}
+
+
+                  {isLogin && (
+                    <div className="text-start pb-5 mt-2">
+                      <a href="#">Forgot password?</a>
+                    </div>
                   )}
 
                   {/* <Button type="submit" className="w-100 py-2">
@@ -328,7 +390,7 @@ const SignIn = () => {
 
                   <div className=''>
                     <a href="/sing-up" >
-                      <button className=" w-100 py-2  h5 c-button c-button2 c-button--gooey">
+                      <button className=" sing-up-button w-100 py-2  c-button c-button2 c-button--gooey">
                         {isLogin ? "Login" : "Signup"}
                         <div className="c-button__blobs">
                           <div />
@@ -348,11 +410,7 @@ const SignIn = () => {
                     </a>
                   </div>
 
-                  {isLogin && (
-                    <div className="text-end mt-2">
-                      <a href="#">Forgot password?</a>
-                    </div>
-                  )}
+
                 </Form>
 
               </div>
@@ -367,14 +425,27 @@ const SignIn = () => {
                   <FaFacebook /> Facebook
                 </Button>
               </div> */}
+              {/* {isLogin && (
+                <p className="text-center mt-3 small">
+                  Do you have a Account   <a className="text-primary">Sing up</a>
+                </p>
+              )} */}
 
-              <p className="text-center mt-3 small">
-                By registering, you agree to our <a href="#" className="text-primary">Terms and Conditions</a>
-              </p>
+              <div
+                
+                
+                checked={!isLogin}
+                    onClick={() => setIsLogin(false)}
+                
+              >
+                <p className="text-center mt-3 small">
+                  Do you have a Account   <a className="text-primary">Sing up</a>
+                </p>
+              </div>
             </div>
           </Col>
         </Row>
-      </Container>
+      </div>
     </div>
   );
 };

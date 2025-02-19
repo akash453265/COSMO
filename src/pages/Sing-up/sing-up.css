@@ -54,31 +54,41 @@
   }  */
 
 
-  .signin-page {
+.signin-page {
     min-height: 100vh;
     background-color: rgb(69, 48, 114);
 }
 
 .signin-box {
     background: white;
-    max-width: 900px;
+
     margin: auto;
     overflow: hidden;
 
 }
 
-.backtohome{
+.backtohome {
     display: flex;
     background-color: transparent;
     justify-content: end;
-}
-.backtohome svg{
-  font-size: 30px;
-}
-.backtohome svg:hover{
-    color: #c36;
     
-  }
+    
+}
+
+
+.backtohome:hover {
+    background-color: #c36;
+    border: none;
+    
+}
+.nonee {
+    text-decoration: none !important;
+    padding: 50px;
+}
+/* .backtohome svg:hover {
+    color: #c36;
+
+} */
 
 .Right-Side {
     background-color: rgba(22, 4, 48, 1);
@@ -88,18 +98,21 @@
 .Right-Side2 {
     text-align: center;
     height: 100%;
+    padding: 0 8%;
 }
 
-.Right-Side2img img {
-    max-width: 120px;
-}
+
 
 .input-group-text {
     color: white;
+
+    height: 55px;
 }
+
 .fw-bold2 {
     font-size: 50px;
 }
+
 a {
     color: #1a75ff;
     text-decoration: none;
@@ -123,4 +136,47 @@ input:-ms-input-placeholder {
 input::-ms-input-placeholder {
     /* Microsoft Edge */
     color: white !important;
+}
+
+.login-toggle2 {
+    width: 100px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.fullwidth {
+    width: 100vw;
+}
+
+.formControl {
+    height: 55px;
+    padding-left: 20px;
+    background-color: #201a46 !important;
+    color: #fff !important;
+
+
+}
+
+.buttongroup {
+    width: 58% !important;
+    padding-bottom: 3rem !important;
+    
+}
+
+.sing-up-button {
+    height: 55px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.formgroup {
+    color: #c36;
+    background-color: transparent !important;
+}
+
+.react-datepicker-wrapper {
+    width: 100%;
+}
+.Right-Side2img {
+    padding-top: 40px;
 }
