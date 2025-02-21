@@ -95,11 +95,11 @@ const App = () => {
                     <form className="fo">
                         <div className="mb-3 d-flex gap-2">
                             <div className="sizeee"><label className="form-label">Name</label>
-                                <input type="text" className="form-control" placeholder="Name" />
+                                <input type="text" className="form-control formControl" placeholder="Name" />
                             </div>
                             <div className="sizeee">
                                 <label className="form-label ">Gender</label>
-                                <select className="form-select form-control">
+                                <select className="form-select form-control formControl">
                                     <option>Male</option>
                                     <option>Female</option>
                                     <option>Other</option>
@@ -109,21 +109,21 @@ const App = () => {
 
                         <div className="mb-3 d-flex gap-2">
                             <div className="sizeee">
-                                <label className="form-label">Date of Birth</label>
-                                <input type="date" className="form-control" />
+                                <label className="form-label ">Date of Birth</label>
+                                <input type="date" className="form-control formControl" />
                             </div>
                             <div className="sizeee">
                                 <label className="form-label">Time of Birth</label>
-                                <input type="time" className="form-control" />
+                                <input type="time" className="form-control formControl" />
                             </div>
                         </div>
                         <div className="mb-3">
                             <label className="form-label">Email</label>
-                            <input type="email" className="form-control" placeholder="Email" />
+                            <input type="email" className="form-control formControl" placeholder="Email" />
                         </div>
                         <div className="mb-3">
                             <label className="form-label">Message</label>
-                            <textarea className="form-control" placeholder="Message" rows="3"></textarea>
+                            <textarea className="form-control formControl" placeholder="Message" rows="3"></textarea>
                         </div>
                         <div className=''>
                             <button className="c-button c-button--gooey formbt3"> Book now                               <div className="c-button__blobs">

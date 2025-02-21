@@ -293,139 +293,280 @@
 
 // export default NavigationBar;
 
-import React, { useState } from "react";
-import { Container, Row, Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
-import { IoHome } from "react-icons/io5";
-import { FaRegFileAlt, FaShoppingBag, FaPhoneAlt } from "react-icons/fa";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { BiLogoBlogger } from "react-icons/bi";
-import { GrGallery } from "react-icons/gr";
-import 'animate.css';
-import './header.css';
-import logo from '../../assets/images/navbar/logo2.png';
+// import React, { useState } from "react";
+// import { Container, Row, Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
+// import { IoHome } from "react-icons/io5";
+// import { FaRegFileAlt, FaShoppingBag, FaPhoneAlt } from "react-icons/fa";
+// import { RxHamburgerMenu } from "react-icons/rx";
+// import { BiLogoBlogger } from "react-icons/bi";
+// import { GrGallery } from "react-icons/gr";
+// import 'animate.css';
+// import './header.css';
+// import logo from '../../assets/images/navbar/logo2.png';
 
-const Header = () => {
-    const [expanded, setExpanded] = useState(false);
+// const Header = () => {
+//     const [expanded, setExpanded] = useState(false);
+
+//     return (
+//         <section className="headerSection animate__animated animate__fadeInDownBig">
+//             <Container>
+//                 <Row>
+//                     <Navbar expand="lg" className="next-navbar" expanded={expanded}>
+//                         {/* <Navbar.Brand href="/" className="me-auto logo px-2 d-lg-none align-items-start">
+//                             <img src={logo} height="30" alt="Logo" className="d-inline-block align-top "/>
+//                         </Navbar.Brand> */}
+//                         <Navbar.Brand href="/" className="me-auto logo px-2  align-items-start">
+//                             <img src={logo} height="30" alt="Logo" className="d-inline-block align-top " />
+//                         </Navbar.Brand>
+
+//                         <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
+//                         <Navbar.Collapse id="responsive-navbar-nav">
+//                             <Button className="close-menu  pl-16 d-lg-none" onClick={() => setExpanded(false)}>X</Button>
+//                             <Nav className="ms-auto">
+//                                 <Nav.Link href="/" className="hoverr" onClick={() => setExpanded(false)}>
+//                                     <IoHome className="nav-text" />
+//                                     <span>Home</span>
+//                                 </Nav.Link>
+//                                 <NavDropdown title={<span><RxHamburgerMenu className="nav-text" /> Services</span>} id="services-dropdown" className="hoverr d-lg-none">
+//                                     <NavDropdown.Item href="/astrology-consultation" onClick={() => setExpanded(false)}>Astrology Consultation</NavDropdown.Item>
+//                                     <NavDropdown.Item href="/vastu-consultation" onClick={() => setExpanded(false)}>Vastu Consultation</NavDropdown.Item>
+//                                 </NavDropdown>
+//                                 <Nav.Link href="#services" className="hoverr d-none d-lg-block" onClick={() => setExpanded(false)}>
+//                                     <RxHamburgerMenu className="nav-text" /><span>Services</span>
+//                                     <ul className="hoverr2">
+//                                         <li><a href="/astrology-consultation" className="text-decoration-none">Astrology Consultation</a></li>
+//                                         <li><a href="/vastu-consultation" className="text-decoration-none">Vastu Consultation</a></li>
+//                                     </ul>
+//                                 </Nav.Link>
+//                                 <Nav.Link href="/appointmentForm" className="hoverr" onClick={() => setExpanded(false)}>
+//                                     <FaRegFileAlt className="nav-text" />
+//                                     <span>Appointments</span>
+//                                 </Nav.Link>
+//                                 <Nav.Link href="/aboutus" className="hoverr" onClick={() => setExpanded(false)}>
+//                                     <FaShoppingBag className="nav-text" />
+//                                     <span>About Us</span>
+//                                 </Nav.Link>
+
+
+//                                 <Nav.Link href="/blogPage" className="hoverr" onClick={() => setExpanded(false)}>
+//                                     <BiLogoBlogger className="nav-text" />
+//                                     <span>Blog</span>
+//                                 </Nav.Link>
+//                                 <Nav.Link href="Adminpanel/" className="hoverr" onClick={() => setExpanded(false)}>
+//                                     <FaPhoneAlt className="nav-text" />
+//                                     <span>Help</span>
+//                                 </Nav.Link>
+//                                 <NavDropdown title={<span><GrGallery className="nav-text" /> Gallerys</span>} id="gallery-dropdown" className="hoverr d-lg-none">
+//                                     <NavDropdown.Item href="/imagegallerypage" onClick={() => setExpanded(false)}>Images Gallery</NavDropdown.Item>
+//                                     <NavDropdown.Item href="/videogallerypage" onClick={() => setExpanded(false)}>Video Gallery</NavDropdown.Item>
+//                                 </NavDropdown>
+//                                 <Nav.Link href="#Gallerys" className="hoverr d-none d-lg-block" onClick={() => setExpanded(false)}>
+//                                     <GrGallery className="nav-text" /><span>Gallerys</span>
+//                                     <ul className="hoverr2">
+//                                         <li><a href="/imagegallerypage" className="text-decoration-none">Images Gallery</a></li>
+//                                         <li><a href="/videogallerypage" className="text-decoration-none">Video Gallery</a></li>
+//                                     </ul>
+//                                 </Nav.Link>
+//                                 <div className="hoverrbtn">
+//                                     <a href="/sing-up">
+//                                         <button className="c-button c-button2 c-button--gooey">
+//                                             Sign/Login
+//                                             <div className="c-button__blobs">
+//                                                 <div />
+//                                                 <div />
+//                                                 <div />
+//                                             </div>
+//                                         </button>
+//                                     </a>
+//                                 </div>
+
+//                             </Nav>
+
+//                             {/* <Navbar.Brand href="/" className="me-auto logo logo33 d-none d-lg-block">
+//                                 <img src={logo} height="40" alt="Logo" />
+//                             </Navbar.Brand> */}
+
+//                             {/* <Nav className="ms-auto">
+//                                 <Nav.Link href="/blogPage" className="hoverr" onClick={() => setExpanded(false)}>
+//                                     <BiLogoBlogger className="nav-text" />
+//                                     <span>Blog</span>
+//                                 </Nav.Link>
+//                                 <Nav.Link href="Adminpanel/" className="hoverr" onClick={() => setExpanded(false)}>
+//                                     <FaPhoneAlt className="nav-text" />
+//                                     <span>Help</span>
+//                                 </Nav.Link>
+//                                 <NavDropdown title={<span><GrGallery className="nav-text" /> Gallerys</span>} id="gallery-dropdown" className="hoverr d-lg-none">
+//                                     <NavDropdown.Item href="/imagegallerypage" onClick={() => setExpanded(false)}>Images Gallery</NavDropdown.Item>
+//                                     <NavDropdown.Item href="/videogallerypage" onClick={() => setExpanded(false)}>Video Gallery</NavDropdown.Item>
+//                                 </NavDropdown>
+//                                 <Nav.Link href="#Gallerys" className="hoverr d-none d-lg-block" onClick={() => setExpanded(false)}>
+//                                     <GrGallery className="nav-text" /><span>Gallerys</span>
+//                                     <ul className="hoverr2">
+//                                         <li><a href="/imagegallerypage" className="text-decoration-none">Images Gallery</a></li>
+//                                         <li><a href="/videogallerypage" className="text-decoration-none">Video Gallery</a></li>
+//                                     </ul>
+//                                 </Nav.Link>
+//                                 <div className="hoverrbtn">
+//                                     <a href="/sing-up">
+//                                         <button className="c-button c-button2 c-button--gooey">
+//                                             Sign/Login
+//                                             <div className="c-button__blobs">
+//                                                 <div />
+//                                                 <div />
+//                                                 <div />
+//                                             </div>
+//                                         </button>
+//                                     </a>
+//                                 </div>
+//                             </Nav> */}
+//                         </Navbar.Collapse>
+//                     </Navbar>
+//                 </Row>
+//             </Container>
+//         </section>
+//     );
+// };
+
+// export default Header;
+
+
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import { Dropdown } from "react-bootstrap"; // Import Bootstrap Dropdown
+import logo from "../../assets/images/navbar/logo2.png";
+import Hamburger from "./Hamburger";
+import "./header.css";
+
+const Navbar = () => {
+    const [showNavbar, setShowNavbar] = useState(false);
+    const [showServices, setShowServices] = useState(false);
+    const [showGallery, setShowGallery] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+    const toggleNavbar = () => setShowNavbar(!showNavbar);
+    const closeNavbar = () => setShowNavbar(false);
+    const [show, setShow] = useState(false);
+    const profileName = "My profile"
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth <= 768);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     return (
-        <section className="headerSection animate__animated animate__fadeInDownBig">
-            <Container>
-                <Row>
-                    <Navbar expand="lg" className="next-navbar" expanded={expanded}>
-                        {/* <Navbar.Brand href="/" className="me-auto logo px-2 d-lg-none align-items-start">
-                            <img src={logo} height="30" alt="Logo" className="d-inline-block align-top "/>
-                        </Navbar.Brand> */}
-                        <Navbar.Brand href="/" className="me-auto logo px-2  align-items-start">
-                            <img src={logo} height="30" alt="Logo" className="d-inline-block align-top " />
-                        </Navbar.Brand>
+        <nav className="navbar">
+            <div className="nav-container">
+                <div className="nav-logo" ><NavLink to="/">
+                    <img src={logo} alt="Logo" className="nav-logo-img" /></NavLink>
+                </div>
+                <div className="nav-menu-icon" onClick={toggleNavbar}>
+                    <Hamburger />
+                </div>
+                <div className={`nav-menu ${showNavbar ? "active" : ""}`}>
+                    <ul>
+                        <li><NavLink to="/" onClick={closeNavbar}>Home</NavLink></li>
+                        <li><NavLink to="/appointment" onClick={closeNavbar}>Appointment</NavLink></li>
 
-                        <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
-                        <Navbar.Collapse id="responsive-navbar-nav">
-                            <Button className="close-menu  pl-16 d-lg-none" onClick={() => setExpanded(false)}>X</Button>
-                            <Nav className="ms-auto">
-                                <Nav.Link href="/" className="hoverr" onClick={() => setExpanded(false)}>
-                                    <IoHome className="nav-text" />
-                                    <span>Home</span>
-                                </Nav.Link>
-                                <NavDropdown title={<span><RxHamburgerMenu className="nav-text" /> Services</span>} id="services-dropdown" className="hoverr d-lg-none">
-                                    <NavDropdown.Item href="/astrology-consultation" onClick={() => setExpanded(false)}>Astrology Consultation</NavDropdown.Item>
-                                    <NavDropdown.Item href="/vastu-consultation" onClick={() => setExpanded(false)}>Vastu Consultation</NavDropdown.Item>
-                                </NavDropdown>
-                                <Nav.Link href="#services" className="hoverr d-none d-lg-block" onClick={() => setExpanded(false)}>
-                                    <RxHamburgerMenu className="nav-text" /><span>Services</span>
-                                    <ul className="hoverr2">
-                                        <li><a href="/astrology-consultation" className="text-decoration-none">Astrology Consultation</a></li>
-                                        <li><a href="/vastu-consultation" className="text-decoration-none">Vastu Consultation</a></li>
-                                    </ul>
-                                </Nav.Link>
-                                <Nav.Link href="/appointmentForm" className="hoverr" onClick={() => setExpanded(false)}>
-                                    <FaRegFileAlt className="nav-text" />
-                                    <span>Appointments</span>
-                                </Nav.Link>
-                                <Nav.Link href="/aboutus" className="hoverr" onClick={() => setExpanded(false)}>
-                                    <FaShoppingBag className="nav-text" />
-                                    <span>About Us</span>
-                                </Nav.Link>
+                        {/* Services Dropdown */}
+                        <li
+                            className="dropdown"
+                            onMouseEnter={!isMobile ? () => setShowServices(true) : undefined}
+                            onMouseLeave={!isMobile ? () => setShowServices(false) : undefined}
+                        >
+                            <Dropdown show={showServices} onClick={isMobile ? () => setShowServices(!showServices) : undefined}>
+                                <Dropdown.Toggle variant="link" id="dropdown-services" className="nav-link">
+                                    Services
+                                </Dropdown.Toggle>
+                                <Dropdown.Menu>
+                                    <Dropdown.Item as="div">
+                                        <NavLink to="/astrology-consultation" onClick={closeNavbar}>Astrology Consultation</NavLink>
+                                    </Dropdown.Item>
+                                    <Dropdown.Item as="div">
+                                        <NavLink to="/vastu-consultation" onClick={closeNavbar}>Vastu Consultation</NavLink>
+                                    </Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
+                        </li>
 
+                        <li><NavLink to="/blog" onClick={closeNavbar}>Blog</NavLink></li>
+                        <li><NavLink to="/aboutus" onClick={closeNavbar}>About Us</NavLink></li>
+                        <li><NavLink to="/help" onClick={closeNavbar}>Help</NavLink></li>
 
-                                <Nav.Link href="/blogPage" className="hoverr" onClick={() => setExpanded(false)}>
-                                    <BiLogoBlogger className="nav-text" />
-                                    <span>Blog</span>
-                                </Nav.Link>
-                                <Nav.Link href="Adminpanel/" className="hoverr" onClick={() => setExpanded(false)}>
-                                    <FaPhoneAlt className="nav-text" />
-                                    <span>Help</span>
-                                </Nav.Link>
-                                <NavDropdown title={<span><GrGallery className="nav-text" /> Gallerys</span>} id="gallery-dropdown" className="hoverr d-lg-none">
-                                    <NavDropdown.Item href="/imagegallerypage" onClick={() => setExpanded(false)}>Images Gallery</NavDropdown.Item>
-                                    <NavDropdown.Item href="/videogallerypage" onClick={() => setExpanded(false)}>Video Gallery</NavDropdown.Item>
-                                </NavDropdown>
-                                <Nav.Link href="#Gallerys" className="hoverr d-none d-lg-block" onClick={() => setExpanded(false)}>
-                                    <GrGallery className="nav-text" /><span>Gallerys</span>
-                                    <ul className="hoverr2">
-                                        <li><a href="/imagegallerypage" className="text-decoration-none">Images Gallery</a></li>
-                                        <li><a href="/videogallerypage" className="text-decoration-none">Video Gallery</a></li>
-                                    </ul>
-                                </Nav.Link>
-                                <div className="hoverrbtn">
-                                    <a href="/sing-up">
-                                        <button className="c-button c-button2 c-button--gooey">
-                                            Sign/Login
-                                            <div className="c-button__blobs">
-                                                <div />
-                                                <div />
-                                                <div />
-                                            </div>
-                                        </button>
-                                    </a>
-                                </div>
+                        {/* Gallery Dropdown */}
+                        <li
+                            className="dropdown"
+                            onMouseEnter={!isMobile ? () => setShowGallery(true) : undefined}
+                            onMouseLeave={!isMobile ? () => setShowGallery(false) : undefined}
+                        >
+                            <Dropdown show={showGallery} onClick={isMobile ? () => setShowGallery(!showGallery) : undefined}>
+                                <Dropdown.Toggle variant="link" id="dropdown-gallery" className="nav-link">
+                                    Gallery
+                                </Dropdown.Toggle>
+                                <Dropdown.Menu>
+                                    <Dropdown.Item as="div">
+                                        <NavLink to="/imagegallerypage" onClick={closeNavbar}>Image Gallery</NavLink>
+                                    </Dropdown.Item>
+                                    <Dropdown.Item as="div">
+                                        <NavLink to="/videogallerypage" onClick={closeNavbar}>Video Gallery</NavLink>
+                                    </Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
+                        </li>
 
-                            </Nav>
+                        {/* <div className="hoverrbtn">
+                            <NavLink to="/sing-up">
+                                <button className="c-button c-button2 c-button--gooey">
+                                    Sign/Login
+                                    <div className="c-button__blobs">
+                                        <div />
+                                        <div />
+                                        <div />
+                                    </div>
+                                </button>
+                            </NavLink>
+                        </div> */}
+                        <div className="position-relative"
+                            onMouseEnter={() => setShow(true)}
+                            onMouseLeave={() => setShow(false)}
+                        >
+                            <Dropdown show={show}>
+                                {/* <Dropdown.Toggle variant="link" id="dropdown-basic">
+                                    <img
+                                        src="https://img.freepik.com/premium-vector/avatar-profile-icon-flat-style-female-user-profile-vector-illustration-isolated-background-women-profile-sign-business-concept_157943-38866.jpg?semt=ais_hybrid" // Replace with actual profile image URL
+                                        alt="Profile "
+                                        className="rounded-circle profileimg"
+                                        
+                                    />
+                                    
+                                </Dropdown.Toggle> */}
+                                <Dropdown  id="dropdown-basic" className="d-flex align-items-center">
+                                    <img
+                                        src="https://img.freepik.com/premium-vector/avatar-profile-icon-flat-style-female-user-profile-vector-illustration-isolated-background-women-profile-sign-business-concept_157943-38866.jpg?semt=ais_hybrid"
+                                        alt="Profile"
+                                        className="rounded-circle profileimg"
+                                        style={{  height: "25px" }} // Adjust size as needed
+                                    />
+                                    <span className="ms-2 fw-bold">{profileName}</span>
+                                </Dropdown>
 
-                            {/* <Navbar.Brand href="/" className="me-auto logo logo33 d-none d-lg-block">
-                                <img src={logo} height="40" alt="Logo" />
-                            </Navbar.Brand> */}
+                                <Dropdown.Menu align="end" className="shadow">
+                                    <Dropdown.Item href="#profile">👤 My Profile</Dropdown.Item>
+                                    <Dropdown.Item href="#account">⚙️ Our Course</Dropdown.Item>
+                                    <Dropdown.Item href="#widgets">📑 Appointment History</Dropdown.Item>
 
-                            {/* <Nav className="ms-auto">
-                                <Nav.Link href="/blogPage" className="hoverr" onClick={() => setExpanded(false)}>
-                                    <BiLogoBlogger className="nav-text" />
-                                    <span>Blog</span>
-                                </Nav.Link>
-                                <Nav.Link href="Adminpanel/" className="hoverr" onClick={() => setExpanded(false)}>
-                                    <FaPhoneAlt className="nav-text" />
-                                    <span>Help</span>
-                                </Nav.Link>
-                                <NavDropdown title={<span><GrGallery className="nav-text" /> Gallerys</span>} id="gallery-dropdown" className="hoverr d-lg-none">
-                                    <NavDropdown.Item href="/imagegallerypage" onClick={() => setExpanded(false)}>Images Gallery</NavDropdown.Item>
-                                    <NavDropdown.Item href="/videogallerypage" onClick={() => setExpanded(false)}>Video Gallery</NavDropdown.Item>
-                                </NavDropdown>
-                                <Nav.Link href="#Gallerys" className="hoverr d-none d-lg-block" onClick={() => setExpanded(false)}>
-                                    <GrGallery className="nav-text" /><span>Gallerys</span>
-                                    <ul className="hoverr2">
-                                        <li><a href="/imagegallerypage" className="text-decoration-none">Images Gallery</a></li>
-                                        <li><a href="/videogallerypage" className="text-decoration-none">Video Gallery</a></li>
-                                    </ul>
-                                </Nav.Link>
-                                <div className="hoverrbtn">
-                                    <a href="/sing-up">
-                                        <button className="c-button c-button2 c-button--gooey">
-                                            Sign/Login
-                                            <div className="c-button__blobs">
-                                                <div />
-                                                <div />
-                                                <div />
-                                            </div>
-                                        </button>
-                                    </a>
-                                </div>
-                            </Nav> */}
-                        </Navbar.Collapse>
-                    </Navbar>
-                </Row>
-            </Container>
-        </section>
+                                    <Dropdown.Item href="#password">🔑 Change Password</Dropdown.Item>
+                                    <Dropdown.Divider />
+                                    <Dropdown.Item href="#logout">🚪 Logout</Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     );
 };
 
-export default Header;
+export default Navbar;
 

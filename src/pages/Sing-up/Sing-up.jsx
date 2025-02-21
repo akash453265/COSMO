@@ -439,7 +439,7 @@ const SignIn = () => {
                 
               >
                 <p className="text-center mt-3 small">
-                  Do you have a Account   <a className="text-primary">Sing up</a>
+                Don’t have an account?  <a className="text-primary">Sing up</a>
                 </p>
               </div>
             </div>

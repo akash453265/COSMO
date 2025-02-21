@@ -26,65 +26,67 @@
   }
    */
 
-   .signin-page {
+.signin-page {
     min-height: 100vh;
     background-color: #f8f9fa;
-  }
-  
-  .signin-box {
+}
+
+.signin-box {
     background: white;
     max-width: 900px;
     margin: auto;
     overflow: hidden;
-    
-  }
-  
-  .backtohome {
+
+}
+
+.backtohome {
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
     font-size: 1.5rem;
     color: #555;
-  }
-  
-  .Right-Side {
+}
+
+.Right-Side {
     background-color: rgba(22, 4, 48, 1);
-  
-  }
-  
-  .Right-Side2 {
+
+}
+
+.Right-Side2 {
     text-align: center;
     height: 100%;
-  }
-  
-  .Right-Side2img img {
+}
+
+.Right-Side2img img {
     max-width: 120px;
-  }
-  
-  .input-group-text {
+}
+
+.input-group-text {
     color: white;
-  }
-  
-  a {
+}
+
+a {
     color: #1a75ff;
     text-decoration: none;
-  }
-  
-  a:hover {
+}
+
+a:hover {
     text-decoration: underline;
-  }
- 
-  ::placeholder {
+}
+
+::placeholder {
     color: white !important;
-    opacity: 1; /* Ensures full visibility */
-  }
-  
-  input:-ms-input-placeholder { /* Internet Explorer */
+    opacity: 1;
+    /* Ensures full visibility */
+}
+
+input:-ms-input-placeholder {
+    /* Internet Explorer */
     color: white !important;
-  }
-  
-  input::-ms-input-placeholder { /* Microsoft Edge */
+}
+
+input::-ms-input-placeholder {
+    /* Microsoft Edge */
     color: white !important;
-  }
-  
+}

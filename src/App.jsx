@@ -74,14 +74,16 @@ import VastuConsultation from "./pages/VastuConsultation/Vastu-Consultation";
 import Form from "./components/Form/Form";
 import Testimonials from "./components/Testimonials/testimonials";
 
+
 function Layout() {
   const location = useLocation();
   const hideHeaderFooter = location.pathname === "/sing-up";
 
   return (
     <div className="mybg">
-      {!hideHeaderFooter && <Header />}
+      {!hideHeaderFooter && <Header /> }
       <Routes>
+      
         <Route path="/" element={<Home />} />
         <Route path="/adminpanel" element={<Adminpanel />} />
         <Route path="/aboutus" element={<Aboutus />} />
