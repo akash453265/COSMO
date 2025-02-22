@@ -1,6 +1,3 @@
-
-
-
 // import React from "react";
 // import { Container, Row, Navbar, Nav, NavDropdown } from "react-bootstrap";
 // import { IoHome } from "react-icons/io5";
@@ -14,7 +11,7 @@
 // import './header.css';
 // import logo from '../../assets/images/navbar/logo2.png';
 // // import { Link } from "react-router-dom";
-// // import SplashCursor from './SplashCursor' 
+// // import SplashCursor from './SplashCursor'
 
 // const Header = () => {
 //     return (
@@ -100,12 +97,7 @@
 //                                     </div>
 //                                 </Nav>
 
-
-
 //                             </Nav>
-
-
-
 
 //                         </Navbar.Collapse>
 //                     </Navbar> */}
@@ -239,9 +231,9 @@
 //   const [expanded, setExpanded] = useState(false);
 
 //   return (
-//     <Navbar 
-//       bg="light" 
-//       expand="md" 
+//     <Navbar
+//       bg="light"
+//       expand="md"
 //       expanded={expanded}
 //       fixed="top"
 //       className="shadow-sm"
@@ -249,36 +241,36 @@
 //       <Container>
 //         <Navbar.Brand href="#home">Your Logo</Navbar.Brand>
 
-//         <Navbar.Toggle 
-//           aria-controls="basic-navbar-nav" 
+//         <Navbar.Toggle
+//           aria-controls="basic-navbar-nav"
 //           onClick={() => setExpanded(expanded ? false : "expanded")}
 //         />
 
 //         <Navbar.Collapse id="basic-navbar-nav">
 //           <Nav className="ms-auto">
-//             <Nav.Link 
-//               href="#home" 
+//             <Nav.Link
+//               href="#home"
 //               onClick={() => setExpanded(false)}
 //               className="mx-2 text-dark"
 //             >
 //               Home
 //             </Nav.Link>
-//             <Nav.Link 
-//               href="#about" 
+//             <Nav.Link
+//               href="#about"
 //               onClick={() => setExpanded(false)}
 //               className="mx-2 text-dark"
 //             >
 //               About
 //             </Nav.Link>
-//             <Nav.Link 
-//               href="#services" 
+//             <Nav.Link
+//               href="#services"
 //               onClick={() => setExpanded(false)}
 //               className="mx-2 text-dark"
 //             >
 //               Services
 //             </Nav.Link>
-//             <Nav.Link 
-//               href="#contact" 
+//             <Nav.Link
+//               href="#contact"
 //               onClick={() => setExpanded(false)}
 //               className="mx-2 text-dark"
 //             >
@@ -294,99 +286,235 @@
 // export default NavigationBar;
 
 import React, { useState } from "react";
-import { Container, Row, Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Navbar,
+  Nav,
+  NavDropdown,
+  Button,
+} from "react-bootstrap";
 import { IoHome } from "react-icons/io5";
 import { FaRegFileAlt, FaShoppingBag, FaPhoneAlt } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { BiLogoBlogger } from "react-icons/bi";
 import { GrGallery } from "react-icons/gr";
-import 'animate.css';
-import './header.css';
-import logo from '../../assets/images/navbar/logo2.png';
+import "animate.css";
+import "./header.css";
+import logo from "../../assets/images/navbar/logo2.png";
 
 const Header = () => {
-    const [expanded, setExpanded] = useState(false);
-
-    return (
-        <section className="headerSection animate__animated animate__fadeInDownBig">
-            <Container>
-                <Row>
-                    <Navbar expand="lg" className="next-navbar" expanded={expanded}>
-                        {/* <Navbar.Brand href="/" className="me-auto logo px-2 d-lg-none align-items-start">
+  const [expanded, setExpanded] = useState(false);
+  //   const token = localStorage.getItem("token"); // Get the token
+  const user = JSON.parse(localStorage.getItem("user")); // Parse user data from string to object
+  const handleLogout = () => {
+    // Clear token from localStorage or cookies
+    localStorage.removeItem('token'); 
+    localStorage.removeItem('user'); 
+    alert('You have been logged out!');
+    window.location.href = '/sing-up'; // Redirect to login page
+  };
+  return (
+    <section className="headerSection animate__animated animate__fadeInDownBig">
+      <Container>
+        <Row>
+          <Navbar expand="lg" className="next-navbar" expanded={expanded}>
+            {/* <Navbar.Brand href="/" className="me-auto logo px-2 d-lg-none align-items-start">
                             <img src={logo} height="30" alt="Logo" className="d-inline-block align-top "/>
                         </Navbar.Brand> */}
-                        <Navbar.Brand href="/" className="me-auto logo px-2  align-items-start">
-                            <img src={logo} height="30" alt="Logo" className="d-inline-block align-top " />
-                        </Navbar.Brand>
+            <Navbar.Brand
+              href="/"
+              className="me-auto logo px-2  align-items-start"
+            >
+              <img
+                src={logo}
+                height="30"
+                alt="Logo"
+                className="d-inline-block align-top "
+              />
+            </Navbar.Brand>
 
-                        <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
-                        <Navbar.Collapse id="responsive-navbar-nav">
-                            <Button className="close-menu  pl-16 d-lg-none" onClick={() => setExpanded(false)}>X</Button>
-                            <Nav className="ms-auto">
-                                <Nav.Link href="/" className="hoverr" onClick={() => setExpanded(false)}>
-                                    <IoHome className="nav-text" />
-                                    <span>Home</span>
-                                </Nav.Link>
-                                <NavDropdown title={<span><RxHamburgerMenu className="nav-text" /> Services</span>} id="services-dropdown" className="hoverr d-lg-none">
-                                    <NavDropdown.Item href="/astrology-consultation" onClick={() => setExpanded(false)}>Astrology Consultation</NavDropdown.Item>
-                                    <NavDropdown.Item href="/vastu-consultation" onClick={() => setExpanded(false)}>Vastu Consultation</NavDropdown.Item>
-                                </NavDropdown>
-                                <Nav.Link href="#services" className="hoverr d-none d-lg-block" onClick={() => setExpanded(false)}>
-                                    <RxHamburgerMenu className="nav-text" /><span>Services</span>
-                                    <ul className="hoverr2">
-                                        <li><a href="/astrology-consultation" className="text-decoration-none">Astrology Consultation</a></li>
-                                        <li><a href="/vastu-consultation" className="text-decoration-none">Vastu Consultation</a></li>
-                                    </ul>
-                                </Nav.Link>
-                                <Nav.Link href="/appointmentForm" className="hoverr" onClick={() => setExpanded(false)}>
-                                    <FaRegFileAlt className="nav-text" />
-                                    <span>Appointments</span>
-                                </Nav.Link>
-                                <Nav.Link href="/aboutus" className="hoverr" onClick={() => setExpanded(false)}>
-                                    <FaShoppingBag className="nav-text" />
-                                    <span>About Us</span>
-                                </Nav.Link>
+            <Navbar.Toggle
+              aria-controls="responsive-navbar-nav"
+              onClick={() => setExpanded(expanded ? false : "expanded")}
+            />
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Button
+                className="close-menu  pl-16 d-lg-none"
+                onClick={() => setExpanded(false)}
+              >
+                X
+              </Button>
+              <Nav className="ms-auto">
+                <Nav.Link
+                  href="/"
+                  className="hoverr"
+                  onClick={() => setExpanded(false)}
+                >
+                  <IoHome className="nav-text" />
+                  <span>Home</span>
+                </Nav.Link>
+                <NavDropdown
+                  title={
+                    <span>
+                      <RxHamburgerMenu className="nav-text" /> Services
+                    </span>
+                  }
+                  id="services-dropdown"
+                  className="hoverr d-lg-none"
+                >
+                  <NavDropdown.Item
+                    href="/astrology-consultation"
+                    onClick={() => setExpanded(false)}
+                  >
+                    Astrology Consultation
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    href="/vastu-consultation"
+                    onClick={() => setExpanded(false)}
+                  >
+                    Vastu Consultation
+                  </NavDropdown.Item>
+                </NavDropdown>
+                <Nav.Link
+                  href="#services"
+                  className="hoverr d-none d-lg-block"
+                  onClick={() => setExpanded(false)}
+                >
+                  <RxHamburgerMenu className="nav-text" />
+                  <span>Services</span>
+                  <ul className="hoverr2">
+                    <li>
+                      <a
+                        href="/astrology-consultation"
+                        className="text-decoration-none"
+                      >
+                        Astrology Consultation
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/vastu-consultation"
+                        className="text-decoration-none"
+                      >
+                        Vastu Consultation
+                      </a>
+                    </li>
+                  </ul>
+                </Nav.Link>
+                <Nav.Link
+                  href="/appointmentForm"
+                  className="hoverr"
+                  onClick={() => setExpanded(false)}
+                >
+                  <FaRegFileAlt className="nav-text" />
+                  <span>Appointments</span>
+                </Nav.Link>
+                <Nav.Link
+                  href="/aboutus"
+                  className="hoverr"
+                  onClick={() => setExpanded(false)}
+                >
+                  <FaShoppingBag className="nav-text" />
+                  <span>About Us</span>
+                </Nav.Link>
 
+                <Nav.Link
+                  href="/blogPage"
+                  className="hoverr"
+                  onClick={() => setExpanded(false)}
+                >
+                  <BiLogoBlogger className="nav-text" />
+                  <span>Blog</span>
+                </Nav.Link>
+                <Nav.Link
+                  href="Adminpanel/"
+                  className="hoverr"
+                  onClick={() => setExpanded(false)}
+                >
+                  <FaPhoneAlt className="nav-text" />
+                  <span>Help</span>
+                </Nav.Link>
+                <NavDropdown
+                  title={
+                    <span>
+                      <GrGallery className="nav-text" /> Gallerys
+                    </span>
+                  }
+                  id="gallery-dropdown"
+                  className="hoverr d-lg-none"
+                >
+                  <NavDropdown.Item
+                    href="/imagegallerypage"
+                    onClick={() => setExpanded(false)}
+                  >
+                    Images Gallery
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    href="/videogallerypage"
+                    onClick={() => setExpanded(false)}
+                  >
+                    Video Gallery
+                  </NavDropdown.Item>
+                </NavDropdown>
+                <Nav.Link
+                  href="#Gallerys"
+                  className="hoverr d-none d-lg-block"
+                  onClick={() => setExpanded(false)}
+                >
+                  <GrGallery className="nav-text" />
+                  <span>Gallerys</span>
+                  <ul className="hoverr2">
+                    <li>
+                      <a
+                        href="/imagegallerypage"
+                        className="text-decoration-none"
+                      >
+                        Images Gallery
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/videogallerypage"
+                        className="text-decoration-none"
+                      >
+                        Video Gallery
+                      </a>
+                    </li>
+                  </ul>
+                </Nav.Link>
+                {!user ? (
+                  <div className="hoverrbtn">
+                    <a href="/sing-up">
+                      <button className="c-button c-button2 c-button--gooey">
+                        Sign/Login
+                        <div className="c-button__blobs">
+                          <div />
+                          <div />
+                          <div />
+                        </div>
+                      </button>
+                    </a>
+                  </div>
+                ) : (
+                  <div className="hoverrbtn">
+                    <button className="c-button c-button2 c-button--gooey" onClick={handleLogout}>
+                     Logout
+                      <div className="c-button__blobs">
+                        <div />
+                        <div />
+                        <div />
+                      </div>
+                    </button>
+                  </div>
+                )}
+              </Nav>
 
-                                <Nav.Link href="/blogPage" className="hoverr" onClick={() => setExpanded(false)}>
-                                    <BiLogoBlogger className="nav-text" />
-                                    <span>Blog</span>
-                                </Nav.Link>
-                                <Nav.Link href="Adminpanel/" className="hoverr" onClick={() => setExpanded(false)}>
-                                    <FaPhoneAlt className="nav-text" />
-                                    <span>Help</span>
-                                </Nav.Link>
-                                <NavDropdown title={<span><GrGallery className="nav-text" /> Gallerys</span>} id="gallery-dropdown" className="hoverr d-lg-none">
-                                    <NavDropdown.Item href="/imagegallerypage" onClick={() => setExpanded(false)}>Images Gallery</NavDropdown.Item>
-                                    <NavDropdown.Item href="/videogallerypage" onClick={() => setExpanded(false)}>Video Gallery</NavDropdown.Item>
-                                </NavDropdown>
-                                <Nav.Link href="#Gallerys" className="hoverr d-none d-lg-block" onClick={() => setExpanded(false)}>
-                                    <GrGallery className="nav-text" /><span>Gallerys</span>
-                                    <ul className="hoverr2">
-                                        <li><a href="/imagegallerypage" className="text-decoration-none">Images Gallery</a></li>
-                                        <li><a href="/videogallerypage" className="text-decoration-none">Video Gallery</a></li>
-                                    </ul>
-                                </Nav.Link>
-                                <div className="hoverrbtn">
-                                    <a href="/sing-up">
-                                        <button className="c-button c-button2 c-button--gooey">
-                                            Sign/Login
-                                            <div className="c-button__blobs">
-                                                <div />
-                                                <div />
-                                                <div />
-                                            </div>
-                                        </button>
-                                    </a>
-                                </div>
-
-                            </Nav>
-
-                            {/* <Navbar.Brand href="/" className="me-auto logo logo33 d-none d-lg-block">
+              {/* <Navbar.Brand href="/" className="me-auto logo logo33 d-none d-lg-block">
                                 <img src={logo} height="40" alt="Logo" />
                             </Navbar.Brand> */}
 
-                            {/* <Nav className="ms-auto">
+              {/* <Nav className="ms-auto">
                                 <Nav.Link href="/blogPage" className="hoverr" onClick={() => setExpanded(false)}>
                                     <BiLogoBlogger className="nav-text" />
                                     <span>Blog</span>
@@ -419,13 +547,12 @@ const Header = () => {
                                     </a>
                                 </div>
                             </Nav> */}
-                        </Navbar.Collapse>
-                    </Navbar>
-                </Row>
-            </Container>
-        </section>
-    );
+            </Navbar.Collapse>
+          </Navbar>
+        </Row>
+      </Container>
+    </section>
+  );
 };
 
 export default Header;
-
