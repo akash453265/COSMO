@@ -2,8 +2,8 @@ import React from 'react'
 import "./Aboutus.css"
 // import { Container, Breadcrumb, } from 'react-bootstrap'
 import Dasbord from "../../components/Dasbord/Dasbord";
-import Form from "../../components/Form/Form"
-import Testimonials from "../../components/Testimonials/testimonials";
+// import Form from "../../components/Form/Form"
+// import Testimonials from "../../components/Testimonials/testimonials";
 import AdvantagesSection from "../AdvantagesSection/AdvantagesSection";
 
 
@@ -89,8 +89,8 @@ function Aboutus() {
             <div>
                 <Dasbord />
                 <AdvantagesSection />
-                <Form />
-                <Testimonials />
+                {/* <Form />
+                <Testimonials /> */}
 
 
             </div>

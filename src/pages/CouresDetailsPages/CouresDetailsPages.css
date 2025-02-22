@@ -1,0 +1,11 @@
+
+.no-hover:hover {
+    border: 1px solid #fff;
+}
+.course-button  {
+    width: 20%;
+    padding: 9px 2px !important;
+}
+.coursebtn {
+    padding: 0 13px;
+}
