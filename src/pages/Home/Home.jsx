@@ -10,11 +10,12 @@ import Imagegallery from "../Imagegallery/Imagegallery";
 // import Videogallery from "../Videogallery/Videogallery";
 // import Inerbanner from "../Inerbanner/Inerbanner";
 import AdvantagesSection from "../AdvantagesSection/AdvantagesSection";
-import Footer2 from "../../components/Footer2/Footer2";
+// import Footer2 from "../../components/Footer2/Footer2";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 // import AuthForm from "../AuthForm/AuthForm";
 // import Herosection from "../../components/Herosection/Herosection";
+
 
 
 AOS.init({
@@ -39,8 +40,8 @@ const Home = () => {
       <Imagegallery />
       {/* <Videogallery /> */}
       {/* <AuthForm /> */}
-      <Footer2 />
-      
+      {/* <Footer2 /> */}
+    
       
      
       

@@ -73,6 +73,7 @@ import AstrologyConsultation from "./pages/AstrologyConsultation/Astrology-Consu
 import VastuConsultation from "./pages/VastuConsultation/Vastu-Consultation";
 import Form from "./components/Form/Form";
 import Testimonials from "./components/Testimonials/testimonials";
+import AstrologyDetailsPage from "./pages/CouresDetailsPages/AstrologyDetailsPage"
 
 
 function Layout() {
@@ -95,6 +96,8 @@ function Layout() {
         <Route path="/sing-up" element={<Singup />} />
         <Route path="/astrology-consultation" element={<AstrologyConsultation />} />
         <Route path="/vastu-consultation" element={<VastuConsultation />} />
+        <Route path="/astrologydetailspage" element={ <AstrologyDetailsPage />} />
+       
       </Routes>
       {!hideHeaderFooter && (
         <>

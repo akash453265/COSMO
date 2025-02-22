@@ -441,6 +441,7 @@ const Navbar = () => {
     const [showNavbar, setShowNavbar] = useState(false);
     const [showServices, setShowServices] = useState(false);
     const [showGallery, setShowGallery] = useState(false);
+    const [showCoures, setShowCoures] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
     const toggleNavbar = () => setShowNavbar(!showNavbar);
@@ -514,6 +515,32 @@ const Navbar = () => {
                             </Dropdown>
                         </li>
 
+                        <li
+                            className="dropdown"
+                            onMouseEnter={!isMobile ? () => setShowCoures(true) : undefined}
+                            onMouseLeave={!isMobile ? () => setShowCoures(false) : undefined}
+                        >
+                            <Dropdown show={showCoures} onClick={isMobile ? () => setShowCourse(!showCourse) : undefined}>
+                                <Dropdown.Toggle variant="link" id="dropdown-Coures" className="nav-link">
+                                    Courses
+                                </Dropdown.Toggle>
+                                <Dropdown.Menu>
+                                    <Dropdown.Item as="div">
+                                        <NavLink to="/astrologydetailspage" onClick={closeNavbar}>Astrology</NavLink>
+                                    </Dropdown.Item>
+                                    <Dropdown.Item as="div">
+                                        <NavLink to="/videogallerypage" onClick={closeNavbar}>Nakshatra</NavLink>
+                                    </Dropdown.Item>
+                                    <Dropdown.Item as="div">
+                                        <NavLink to="/videogallerypage" onClick={closeNavbar}>Vastu</NavLink>
+                                    </Dropdown.Item>
+                                    <Dropdown.Item as="div">
+                                        <NavLink to="/videogallerypage" onClick={closeNavbar}>Upcomming Couse</NavLink>
+                                    </Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
+                        </li>
+
                         {/* <div className="hoverrbtn">
                             <NavLink to="/sing-up">
                                 <button className="c-button c-button2 c-button--gooey">
@@ -540,12 +567,12 @@ const Navbar = () => {
                                     />
                                     
                                 </Dropdown.Toggle> */}
-                                <Dropdown  id="dropdown-basic" className="d-flex align-items-center">
+                                <Dropdown id="dropdown-basic" className="d-flex align-items-center">
                                     <img
                                         src="https://img.freepik.com/premium-vector/avatar-profile-icon-flat-style-female-user-profile-vector-illustration-isolated-background-women-profile-sign-business-concept_157943-38866.jpg?semt=ais_hybrid"
                                         alt="Profile"
                                         className="rounded-circle profileimg"
-                                        style={{  height: "25px" }} // Adjust size as needed
+                                        style={{ height: "25px" }} // Adjust size as needed
                                     />
                                     <span className="ms-2 fw-bold">{profileName}</span>
                                 </Dropdown>
