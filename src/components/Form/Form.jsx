@@ -27,7 +27,7 @@ const App = () => {
         setResponseMessage("");
 
         try {
-            const response = await fetch("http://localhost:5000/api/appointments/book", {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/appointments/book`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
