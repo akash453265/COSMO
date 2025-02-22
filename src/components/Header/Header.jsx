@@ -618,7 +618,7 @@ const Navbar = () => {
                                 </button>
                             </NavLink>
                         </div> */}
-            {/* {user ? ( */}
+            {user ? (
               <div
                 className="position-relative"
                 onMouseEnter={() => setShow(true)}
@@ -664,7 +664,7 @@ const Navbar = () => {
                   </Dropdown.Menu>
                 </Dropdown>
               </div>
-            {/* ) : ( */}
+            ) : (
               <div className="hoverrbtn">
                 <a href="/sing-up">
                   <button className="c-button c-button2 c-button--gooey">
@@ -677,7 +677,7 @@ const Navbar = () => {
                   </button>
                 </a>
               </div>
-            {/* )} */}
+            )}
           </ul>
         </div>
       </div>
