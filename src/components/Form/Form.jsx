@@ -78,7 +78,7 @@ const App = () => {
                                     <label className="form-label">Name</label>
                                     <input
                                         type="text"
-                                        className="form-control"
+                                        className="form-control formControl"
                                         placeholder="Name"
                                         name="name"
                                         value={formData.name}
@@ -89,7 +89,7 @@ const App = () => {
                                 <div className="sizeee">
                                     <label className="form-label">Gender</label>
                                     <select
-                                        className="form-select form-control"
+                                        className="form-select form-control formControl"
                                         name="gender"
                                         value={formData.gender}
                                         onChange={handleChange}
@@ -107,7 +107,7 @@ const App = () => {
                                     <label className="form-label">Date of Birth</label>
                                     <input
                                         type="date"
-                                        className="form-control"
+                                        className="form-control formControl"
                                         name="dateOfBirth"
                                         value={formData.dateOfBirth}
                                         onChange={handleChange}
@@ -118,7 +118,7 @@ const App = () => {
                                     <label className="form-label">Time of Birth</label>
                                     <input
                                         type="time"
-                                        className="form-control"
+                                        className="form-control formControl"
                                         name="timeOfBirth"
                                         value={formData.timeOfBirth}
                                         onChange={handleChange}
@@ -130,7 +130,7 @@ const App = () => {
                                 <label className="form-label">Email</label>
                                 <input
                                     type="email"
-                                    className="form-control"
+                                    className="form-control formControl"
                                     placeholder="Email"
                                     name="email"
                                     value={formData.email}
@@ -141,7 +141,7 @@ const App = () => {
                             <div className="mb-3">
                                 <label className="form-label">Message</label>
                                 <textarea
-                                    className="form-control"
+                                    className="form-control formControl"
                                     placeholder="Message"
                                     rows="3"
                                     name="message"

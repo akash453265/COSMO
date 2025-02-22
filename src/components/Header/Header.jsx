@@ -421,7 +421,7 @@
 // export default Header;
 
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink,  Link  } from "react-router-dom";
 import { Dropdown } from "react-bootstrap"; // Import Bootstrap Dropdown
 import logo from "../../assets/images/navbar/logo2.png";
 import Hamburger from "./Hamburger";
@@ -524,7 +524,7 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/help" onClick={closeNavbar}>
+              <NavLink to="/adminpanel" onClick={closeNavbar}>
                 Help
               </NavLink>
             </li>
@@ -618,7 +618,7 @@ const Navbar = () => {
                                 </button>
                             </NavLink>
                         </div> */}
-            {user ? (
+            {/* {user ? ( */}
               <div
                 className="position-relative"
                 onMouseEnter={() => setShow(true)}
@@ -648,13 +648,13 @@ const Navbar = () => {
                   </Dropdown>
 
                   <Dropdown.Menu align="end" className="shadow">
-                    <Dropdown.Item href="#profile">👤 My Profile</Dropdown.Item>
+                    <Dropdown.Item as={Link} to="/adminpanel?tab=editProfile">👤 My Profile</Dropdown.Item>
                     <Dropdown.Item href="#account">⚙️ Our Course</Dropdown.Item>
                     <Dropdown.Item href="#widgets">
                       📑 Appointment History
                     </Dropdown.Item>
 
-                    <Dropdown.Item href="#password">
+                    <Dropdown.Item as={Link} to="/adminpanel?tab=resetPassword">
                       🔑 Change Password
                     </Dropdown.Item>
                     <Dropdown.Divider />
@@ -664,7 +664,7 @@ const Navbar = () => {
                   </Dropdown.Menu>
                 </Dropdown>
               </div>
-            ) : (
+            {/* ) : ( */}
               <div className="hoverrbtn">
                 <a href="/sing-up">
                   <button className="c-button c-button2 c-button--gooey">
@@ -677,7 +677,7 @@ const Navbar = () => {
                   </button>
                 </a>
               </div>
-            )}
+            {/* )} */}
           </ul>
         </div>
       </div>

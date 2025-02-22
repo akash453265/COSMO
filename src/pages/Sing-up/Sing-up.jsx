@@ -208,141 +208,7 @@ import "react-datepicker/dist/react-datepicker.css";
 const SignIn = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [dob, setDob] = useState(null);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    number: "",
-    password: "",
-    confirmPassword: "",
-  });
 
-  // Handle form data changes
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  // Handle form submission
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   if (!isLogin) {
-  //     // Validation: Ensure passwords match for signup
-  //     if (formData.password !== formData.confirmPassword) {
-  //       alert("Passwords do not match!");
-  //       return;
-  //     }
-
-  //     const signupData = {
-  //       username: formData.name,
-  //       email: formData.email,
-  //       phone: formData.number,
-  //       dob: dob ? dob.toISOString() : null,
-  //       password: formData.password,
-  //     };
-
-  //     try {
-  //       const response = await fetch("http://localhost:5000/api/users/register", {
-  //         method: "POST",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //         body: JSON.stringify(signupData),
-  //       });
-
-  //       const result = await response.json();
-
-  //       if (response.ok) {
-  //         alert("Signup successful!");
-  //         console.log("User data:", result);
-  //       } else {
-  //         alert("Signup failed: " + result.message);
-  //       }
-  //     } catch (error) {
-  //       console.error("Error during signup:", error);
-  //       alert("An error occurred. Please try again.");
-  //     }
-  //   } else {
-  //     // Handle login logic here if needed
-  //     alert("Login functionality not implemented yet.");
-  //   }
-  // };
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-  
-    if (!isLogin) {
-      // Validation: Ensure passwords match for signup
-      if (formData.password !== formData.confirmPassword) {
-        alert("Passwords do not match!");
-        return;
-      }
-  
-      const signupData = {
-        username: formData.name,
-        email: formData.email,
-        phone: formData.number,
-        dob: dob ? dob.toISOString() : null,
-        password: formData.password,
-      };
-  
-      try {
-        // eslint-disable-next-line no-undef
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/users/register`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(signupData),
-        });
-  
-        const result = await response.json();
-  
-        if (response.ok) {
-          alert("Signup successful!");
-          console.log("User data:", result);
-        } else {
-          alert("Signup failed: " + result.message);
-        }
-      } catch (error) {
-        console.error("Error during signup:", error);
-        alert("An error occurred. Please try again.");
-      }
-    } else {
-      // Login functionality
-      const loginData = {
-        email: formData.email,
-        password: formData.password,
-      };
-  
-      try {
-        // eslint-disable-next-line no-undef
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/users/login`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(loginData),
-        });
-  
-        const result = await response.json();
-  
-        if (response.ok) {
-          alert("Login successful!");
-          localStorage.setItem("token", result.token);
-          localStorage.setItem("user", JSON.stringify(result.user)); // Save the user object as a string
-          window.location.href = '/';
-  
-          // Optionally, save the token or user data to localStorage/sessionStorage
-          // localStorage.setItem("token", result.token);
-        } else {
-          alert("Login failed: " + result.message);
-        }
-      } catch (error) {
-        console.error("Error during login:", error);
-        alert("An error occurred. Please try again.");
-      }
-    }
-  };
   return (
     <div className=" signin-page d-flex justify-content-center align-items-center">
       <div className="fullwidth ">
@@ -429,47 +295,50 @@ const SignIn = () => {
 
                 </ButtonGroup>
 
-               {/* Form */}
-               <Form className="autofrom" onSubmit={handleSubmit}>
+                {/* Form */}
+                <Form className="autofrom">
                   {!isLogin && (
-                    <Form.Group className="mb-3 formgroup">
+                    <Form.Group className="mb-3 formgroup ">
                       <Form.Control
                         type="text"
-                        name="name"
                         placeholder="Enter Your Name"
-                        className="formControl border-light"
+                        className=" formControl border-light"
                         required
-                        value={formData.name}
-                        onChange={handleChange}
                       />
                     </Form.Group>
+
+
+
                   )}
                   <Form.Group controlId="email" className="mb-3">
-                    <Form.Control
-                      type="email"
-                      name="email"
-                      placeholder="Enter Your Email"
-                      className="formControl border-light"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                    />
+                    <div className="input-group">
+                      {/* <span className="input-group-text  text-light border-light">
+                        <FaEnvelope />
+                      </span> */}
+                      <Form.Control
+                        type="email"
+                        placeholder="Enter Your Email "
+                        className=" formControl  border-light"
+                        required
+                      />
+                    </div>
                   </Form.Group>
+
                   {!isLogin && (
-                    <Form.Group className="mb-3 formgroup">
+                    <Form.Group className="mb-3 formgroup ">
                       <Form.Control
                         type="number"
-                        name="number"
                         placeholder="Enter Your Number"
-                        className="formControl border-light"
+                        className=" formControl border-light"
                         required
-                        value={formData.number}
-                        onChange={handleChange}
                       />
                     </Form.Group>
+
+
+
                   )}
                   {!isLogin && (
-                    <Form.Group className="mb-3 formgroup">
+                    <Form.Group className="mb-3 formgroup ">
                       <DatePicker
                         selected={dob}
                         onChange={(date) => setDob(date)}
@@ -479,34 +348,69 @@ const SignIn = () => {
                         required
                       />
                     </Form.Group>
+
+
+
                   )}
-                  <Form.Group className="mb-3 formgroup">
+
+                  <Form.Group className="mb-3 formgroup ">
                     <Form.Control
                       type="password"
-                      name="password"
                       placeholder="Enter Your Password"
-                      className="formControl border-light"
+                      className=" formControl border-light"
                       required
-                      value={formData.password}
-                      onChange={handleChange}
                     />
                   </Form.Group>
+
+
+
                   {!isLogin && (
                     <Form.Group className="mb-3">
                       <Form.Control
                         type="password"
-                        name="confirmPassword"
                         placeholder="Confirm Password"
-                        className="formControl border-light"
+                        className=" formControl border-white"
                         required
-                        value={formData.confirmPassword}
-                        onChange={handleChange}
                       />
                     </Form.Group>
+
+
                   )}
-                  <Button type="submit" className="w-100 py-2 sing-up-button">
-                    {isLogin ? "Login" : "Signup"}
-                  </Button>
+
+
+                  {isLogin && (
+                    <div className="text-start pb-5 mt-2">
+                      <a href="#">Forgot password?</a>
+                    </div>
+                  )}
+
+                  {/* <Button type="submit" className="w-100 py-2">
+                  {isLogin ? "Login" : "Signup"}
+                </Button> */}
+
+                  <div className=''>
+                    <a href="/sing-up" >
+                      <button className=" sing-up-button w-100 py-2  c-button c-button2 c-button--gooey">
+                        {isLogin ? "Login" : "Signup"}
+                        <div className="c-button__blobs">
+                          <div />
+                          <div />
+                          <div />
+                        </div>
+                      </button>
+                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style={{ display: 'block', height: 0, width: 0 }}>
+                        <defs>
+                          <filter id="goo">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation={10} result="blur" />
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                            <feBlend in="SourceGraphic" in2="goo" />
+                          </filter>
+                        </defs>
+                      </svg>
+                    </a>
+                  </div>
+
+
                 </Form>
 
               </div>

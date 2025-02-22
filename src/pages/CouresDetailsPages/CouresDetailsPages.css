@@ -1,6 +1,9 @@
-
+.no-hover {
+    margin-top: 0px !important;
+}
 .no-hover:hover {
     border: 1px solid #fff;
+    background: transparent !important;
 }
 .course-button  {
     width: 20%;

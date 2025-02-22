@@ -3,9 +3,9 @@ import React from "react";
 import { Card,  Container, Row, Col, Image } from "react-bootstrap";
 import "./CouresDetailsPages.css"
 
-const PrashnaKundaliCourse = () => {
+const Course = () => {
     return (
-        <Container className="mt-4">
+        <Container className="py-5">
             <Row>
                 <Col md={5}>
                     <Image src="https://cosmicenergiies.com/wp-content/uploads/2022/02/astro-vastu-consultant-jaipur-rajasthan-gurugram-gurgaon-shradha-sharma-8058000040-9-768x768.jpg" fluid />
@@ -68,4 +68,4 @@ const PrashnaKundaliCourse = () => {
     );
 };
 
-export default PrashnaKundaliCourse;
+export default Course;
