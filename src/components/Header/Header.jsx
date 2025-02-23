@@ -618,7 +618,7 @@ const Navbar = () => {
                                 </button>
                             </NavLink>
                         </div> */}
-            {user ? (
+            {!user ? (
               <div
                 className="position-relative"
                 onMouseEnter={() => setShow(true)}
